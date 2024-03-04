@@ -2,6 +2,7 @@ import { Controller, Get, Query } from '@nestjs/common';
 import { CharactersService } from './characters.service';
 import { ApiOkResponse, ApiQuery, ApiTags } from '@nestjs/swagger';
 import Character from './types/characters';
+import { CharacterDTO } from './dto/character.dto';
 
 @ApiTags('character')
 @Controller('character')
@@ -9,13 +10,14 @@ export class CharactersController {
   constructor(private readonly charactersService: CharactersService) {}
 
   @ApiOkResponse({
-    type: Object,
-    description: 'Returns available roles and associated users',
+    type: CharacterDTO,
+    description: 'Returns available Star Wars Character metadata',
   })
   @ApiQuery({
     name: 'search',
     type: String,
-    description: 'Star Wars Character Name',
+    description:
+      'Enter a Star Wars character name. Will find partial text match.',
     required: false,
   })
   @Get()

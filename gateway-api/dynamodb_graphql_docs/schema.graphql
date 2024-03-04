@@ -1,0 +1,77 @@
+type Person @model{
+  id: ID!
+  name: String!
+  birthYear: String
+  eyeColor: String
+  gender: String
+  hairColor: String
+  height: String
+  mass: String
+  skinColor: String
+  films: [Film]
+}
+
+type Film @model{
+  id: ID!
+  title: String!
+  episodeId: Int!
+  openingCrawl: String
+  director: String
+  producer: String
+  releaseDate: String
+  characters: [Person!]!
+}
+
+type Query {
+  person(id: ID!): Person
+  film(id: ID!): Film
+}
+
+type Mutation {
+  createPerson(input: CreatePersonInput!): Person
+  updatePerson(id: ID!, input: UpdatePersonInput!): Person
+  deletePerson(id: ID!): Person
+  createFilm(input: CreateFilmInput!): Film
+  updateFilm(id: ID!, input: UpdateFilmInput!): Film
+  deleteFilm(id: ID!): Film
+}
+
+input CreatePersonInput {
+  name: String!
+  birthYear: String
+  eyeColor: String
+  gender: String
+  hairColor: String
+  height: String
+  mass: String
+  skinColor: String
+}
+
+input UpdatePersonInput {
+  name: String
+  birthYear: String
+  eyeColor: String
+  gender: String
+  hairColor: String
+  height: String
+  mass: String
+  skinColor: String
+}
+
+input CreateFilmInput {
+  title: String!
+  episodeId: Int!
+  openingCrawl: String
+  director: String
+  producer: String
+  releaseDate: String
+}
+
+input UpdateFilmInput {
+  title: String
+  episodeId: Int
+  openingCrawl: String
+  director: String
+  producer: String
+  releaseDate: String
+}
