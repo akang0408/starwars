@@ -10,7 +10,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Adding descriptive tags can help search engines index your content for better SEO
+  // Adding descriptive tags can help search engines index your content for better SEO. Added a couple examples below.
   return (
     <html lang="en">
       <head>
