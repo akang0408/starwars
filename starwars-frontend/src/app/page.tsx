@@ -1,7 +1,7 @@
 'use client';
 
+import LandingPage from 'components/LandingPage/LandingPage';
 import React from 'react';
-import LandingPage from 'components/LandingPage';
 
 const Homepage = (): JSX.Element => {
   return <LandingPage />;
