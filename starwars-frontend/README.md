@@ -17,7 +17,7 @@ Simple Application that connects to Gateway API to search for Star Wars Characte
 - Create modular React Components that are typed with TS
 - Create Header with basic nav routes that is displayed in route level layout.ts
 - Main Functionality of application can be found at /characters
-- Created some unit tests and an integration test for the Characters component. Can be found at `src/components/Characters/__tests__`
+- Created some unit tests and an integration test for the Characters component. Can be found at `src/app/characters/components/Characters/__tests__`
 
 ## Quick start
 

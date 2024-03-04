@@ -12,7 +12,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 import Profile from './components/Profile';
 import Character from 'types/character';
-import CharacterSearchService from '../../services/CharacterSearchService';
+import CharacterSearchService from '../../../services/CharacterSearchService';
 
 const Characters: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import Characters from '../Characters';
-import CharacterSearchService from '../../../services/CharacterSearchService';
+import CharacterSearchService from '../../../../services/CharacterSearchService';
 
-jest.mock('../../../services/CharacterSearchService');
+jest.mock('../../../../services/CharacterSearchService');
 
 describe('Characters component unit tests', () => {
   beforeEach(() => {
