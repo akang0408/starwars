@@ -16,3 +16,9 @@ This repository contains both the Next.js FE (starwars-frontend) and Nest.js API
 - Install dependencies: `yarn install`
 - Start the server: `yarn run dev`
 - Run Tests: `yarn test`
+  
+## Data Modeling (GraphQL and Dynamo DB)
+
+- DynamoDB data schema can be found at `gateway-api/dynamodb_graphql_docs/DynamoDB_Schema.md`
+- GraphQL schema for types, queries, and mutations for `People` and `Film` can be found at `gateway-api/dynamodb_graphql_docs/schema.graphql`
+- An example AppSync resolver can be found at `gateway-api/dynamodb_graphql_docs/resolvers`
